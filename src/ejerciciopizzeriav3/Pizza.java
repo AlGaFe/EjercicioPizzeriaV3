@@ -12,13 +12,8 @@ public class Pizza {
   private ArrayList <String> listaIngredientes = new ArrayList<>();
   private Precios precios = new Precios();
 
-    public Pizza(String masa, String tipo, String tamano) {
-        this.masa = masa;
-        this.tipo = tipo;
-        this.tamano = tamano;
-    }
-    public void AñadirIngrediente (String ingrediente){
-        listaIngredientes.add(ingrediente);
+    public Pizza() {
+
     }
     public void setMasa(String masa) {
         this.masa = masa;
@@ -63,17 +58,30 @@ public class Pizza {
     public Double calcularPrecio(){
        Double precioTotal;
        Double precioIngredientes=0.0;
+         
        Double precioMasa= precios.precioMasa(masa);
+         if(precioMasa==null){
+         precioMasa=0.0;
+    }
        Double multiplicadorTamano = precios.precioTamano(tamano);
-       Double precioTipo = precios.precioTipo(tipo);
-        for(int i = 0; i < this.listaIngredientes.size(); i++) {
-            String ingrediente=
-            Double precioIngrediente= precios.precioIngrediente(i);
+       if (multiplicadorTamano==null) {
+            multiplicadorTamano=1.15;
         }
-       
-            Double precioIngrediente= precios.precioIngrediente(i);
-            precioIngredientes=precioIngredientes + precioIngrediente;
-        
+       Double precioTipo = precios.precioTipo(tipo);
+       if(precioTipo==null){
+       precioTipo=0.0;
+    }
+        for(int i = 0; i < this.listaIngredientes.size(); i++) {
+            String ingrediente=listaIngredientes.get(i);
+            Double precioIngrediente= precios.precioIngrediente(ingrediente);
+            if(precioIngrediente==null){
+                precioIngrediente=0.0;
+            }
+            precioIngredientes +=precioIngrediente;
+            
+        }
+    
+   
        precioTotal=multiplicadorTamano*(precioIngredientes+precioMasa+precioTipo);
        return precioTotal;
     }

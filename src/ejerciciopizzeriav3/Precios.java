@@ -43,30 +43,6 @@ public class Precios {
     public Map<String, Double> getTiposPizza() {
         return tiposPizza;
     }
-    public void anadirIngrediente(String ingrediente, Double precio){
-        ingredientes.put(ingrediente, precio);
-    }
-    public void anadirMasas(String masa, Double precio){
-        masas.put(masa, precio);
-    }
-    public void anadirTamano(String tamano,Double multiplicador){
-        tamanos.put(tamano, multiplicador);
-    }
-    public void anadirTipoPizza(String tipo, Double precio){
-        tiposPizza.put(tipo, precio);
-    }
-     public void eliminarIngrediente(String ingrediente){
-        ingredientes.remove(ingrediente);
-    }
-    public void elimiarMasas(String masa){
-        masas.remove(masa);
-    }
-    public void eliminarTamano(String tamano){
-        tamanos.remove(tamano);
-    }
-    public void eliminarTipoPizza(String tipo){
-        tiposPizza.remove(tipo);
-    }
     public Double precioIngrediente(String ingrediente){
         Double precio;
         precio= ingredientes.get(ingrediente);

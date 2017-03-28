@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="ejerciciopizzeriav3.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ejerciciopizzeriav3.FXMLDocumentController">
    <children>
       <Pane layoutX="42.0" layoutY="209.0" prefHeight="188.0" prefWidth="297.0">
          <children>
@@ -167,35 +167,33 @@
                </font>
             </Label>
             <Button fx:id="cancelarPedido" layoutX="98.0" layoutY="345.0" mnemonicParsing="false" onAction="#ResetPedido" stylesheets="@../../../EjercicioPizzeriaV20/src/ejerciciopizzeriav20/cssPizzeria.css" text="Cancelar Pedido" />
+            <Label fx:id="precioTotal" layoutX="206.0" layoutY="306.0" prefHeight="14.0" prefWidth="38.0">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="precioMasa" layoutX="206.0" layoutY="29.0" prefHeight="14.0" prefWidth="38.0">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="precioPizza" layoutX="199.0" layoutY="75.0" prefHeight="14.0" prefWidth="38.0">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="precioIngredientes" layoutX="199.0" layoutY="182.0" prefHeight="14.0" prefWidth="38.0">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="precioTamaño" layoutX="199.0" layoutY="278.0" prefHeight="14.0" prefWidth="38.0">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
-      <Label fx:id="tipoMasa11" layoutX="138.0" layoutY="178.0" prefHeight="14.0" prefWidth="38.0" />
-      <Label fx:id="tipoMasa111" layoutX="92.0" layoutY="202.0" prefHeight="14.0" prefWidth="38.0" />
-      <Label fx:id="precioMasa" layoutX="230.0" layoutY="37.0" prefHeight="14.0" prefWidth="38.0">
-         <font>
-            <Font name="System Italic" size="11.0" />
-         </font>
-      </Label>
-      <Label fx:id="precioPizza" layoutX="230.0" layoutY="83.0" prefHeight="14.0" prefWidth="38.0">
-         <font>
-            <Font name="System Italic" size="11.0" />
-         </font>
-      </Label>
-      <Label fx:id="precioIngredientes" layoutX="230.0" layoutY="185.0" prefHeight="14.0" prefWidth="38.0">
-         <font>
-            <Font name="System Italic" size="11.0" />
-         </font>
-      </Label>
-      <Label fx:id="precioTamaño" layoutX="230.0" layoutY="286.0" prefHeight="14.0" prefWidth="38.0">
-         <font>
-            <Font name="System Italic" size="11.0" />
-         </font>
-      </Label>
-      <Label fx:id="precioTotal" layoutX="226.0" layoutY="326.0" prefHeight="14.0" prefWidth="38.0">
-         <font>
-            <Font name="System Italic" size="11.0" />
-         </font>
-      </Label>
       <Label layoutX="606.0" layoutY="210.0" prefHeight="14.0" prefWidth="44.0" text="Precio">
          <font>
             <Font name="System Bold" size="11.0" />
